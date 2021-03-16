@@ -41,4 +41,14 @@ namespace LoginDomain.DataModel
         public DbSet<Users> users { get; set; }
         public DbSet<UserRole> userRoles { get; set; }
     }
+
+
+    /*******************************************************
+     * Another way to apply this rules to classify how this classes should map to the database without thinking about business rules of this calss
+     * we can override those configuration here in DbContext Class using Fluent Api (I never tried) but I knew the concepts.
+
+      By doing that we are keeping EF specific information inside the EF insted of applying to domain classes. 
+
+     *******************************************************/
+
 }
