@@ -38,6 +38,7 @@ namespace LoginDomain.DataModel
 
     public class LoginContext : DbContext
     {
-        public DbSet<Users> MyProperty { get; set; }
+        public DbSet<Users> users { get; set; }
+        public DbSet<UserRole> userRoles { get; set; }
     }
 }
