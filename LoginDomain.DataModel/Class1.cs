@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using LoginDomain.Classes;
 
 //USING THIS DATAMODEL WE CAN ACCESS/MAKE INTERACTION WITH DATABASE AND DIFF API USING EF6
 //We will add EF6 into this project.
@@ -37,6 +38,6 @@ namespace LoginDomain.DataModel
 
     public class LoginContext : DbContext
     {
-
+        public DbSet<Users> MyProperty { get; set; }
     }
 }
