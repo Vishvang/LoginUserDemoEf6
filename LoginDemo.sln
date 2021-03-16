@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1433
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginDomain.Classes", "LoginDomain.Classes\LoginDomain.Classes.csproj", "{85F9A82E-D9E4-41B6-A197-FEF47728CA53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginDomain.DataModel", "LoginDomain.DataModel\LoginDomain.DataModel.csproj", "{BC9DB290-69DA-4DE8-8126-EDFA0E6B112A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{85F9A82E-D9E4-41B6-A197-FEF47728CA53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85F9A82E-D9E4-41B6-A197-FEF47728CA53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85F9A82E-D9E4-41B6-A197-FEF47728CA53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC9DB290-69DA-4DE8-8126-EDFA0E6B112A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC9DB290-69DA-4DE8-8126-EDFA0E6B112A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC9DB290-69DA-4DE8-8126-EDFA0E6B112A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC9DB290-69DA-4DE8-8126-EDFA0E6B112A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

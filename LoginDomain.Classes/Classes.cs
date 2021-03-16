@@ -12,6 +12,7 @@ namespace LoginDomain.Classes
         public Guid UserID { get; set; }
         public string Username { get; set; }
         public string LoginName { get; set; }
+        //For security we can convert pwd into hass so no one can see in database as well.
         //public string HashedPassword { get; set; }
         public string Pwd { get; set; }
 
