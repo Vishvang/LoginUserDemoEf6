@@ -7,7 +7,9 @@ namespace LoginDomain.Classes
 
     //POCO - Plain odd class object
 
-    public class User
+
+    //We can consider as Entity as well.
+    public class Users
     {
         public Guid UserID { get; set; }
         public string Username { get; set; }
