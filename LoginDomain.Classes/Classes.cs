@@ -42,11 +42,11 @@ namespace LoginDomain.Classes
     }
 
 
-
     /*****************************************************************************************
      * So what we have now is hwo Ef infer its model but further also how it can affect the interpretation of the model. 
      * 
      * EF follow these rules all the way to the database and will infer/accept the database has the same rule.
      * 
     *****************************************************************************************/
+   
 }
