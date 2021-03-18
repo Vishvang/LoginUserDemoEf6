@@ -52,6 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginContext.cs" />
+    <Compile Include="Migrations\202103180133405_Initial.cs" />
+    <Compile Include="Migrations\202103180133405_Initial.designer.cs">
+      <DependentUpon>202103180133405_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -64,6 +68,11 @@
       <Project>{85f9a82e-d9e4-41b6-a197-fef47728ca53}</Project>
       <Name>LoginDomain.Classes</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202103180133405_Initial.resx">
+      <DependentUpon>202103180133405_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
