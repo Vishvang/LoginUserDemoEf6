@@ -11,7 +11,7 @@ namespace LoginDemo.Web.Controllers
     {
         IUserData db;
 
-        public HomeController()
+        public HomeController(IUserData db1)
         {
             db = new InMemoryUserData();
         }
