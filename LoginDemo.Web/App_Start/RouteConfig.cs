@@ -7,6 +7,8 @@ using System.Web.Routing;
 
 namespace LoginDemo.Web
 {
+
+    //Configuration as code
     public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
