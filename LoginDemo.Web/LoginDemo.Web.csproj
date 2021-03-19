@@ -181,6 +181,16 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoginDomain.Classes\LoginDomain.Classes.csproj">
+      <Project>{85F9A82E-D9E4-41B6-A197-FEF47728CA53}</Project>
+      <Name>LoginDomain.Classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LoginDomain.DataModel\LoginDomain.DataModel.csproj">
+      <Project>{BC9DB290-69DA-4DE8-8126-EDFA0E6B112A}</Project>
+      <Name>LoginDomain.DataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

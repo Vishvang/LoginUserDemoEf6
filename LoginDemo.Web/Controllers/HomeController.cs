@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoginDomain.DataModel.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,18 @@ namespace LoginDemo.Web.Controllers
 {
     public class HomeController : Controller
     {
+        IUserData db;
+
+        public HomeController()
+        {
+            db = new InMemoryUserData();
+        }
+
+
         public ActionResult Index()
         {
-            return View();
+            var model = db.GetAll();
+            return View(model);
         }
 
         public ActionResult About()
@@ -23,6 +33,14 @@ namespace LoginDemo.Web.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+
+        public ActionResult UserList()
+        {
+            ViewBag.Message = "Your Users Details.";
 
             return View();
         }
