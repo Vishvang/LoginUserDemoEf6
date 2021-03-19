@@ -1,0 +1,14 @@
+﻿We add Web project.
+We build the project, now VS will run MSBuild Tool to run c# compiler - to run across all code here.
+
+We can place all class js and css files into one project but we should keep seperate.
+This concept can be use is microservices concepts as well as 
+in a scenerio when we have small untilities services which talk to database frequently. 
+So it helps us to put data related abstraction into seperate project and than I can use into different project.
+
+We can publish as Nuget Package as well which can ne use by different team in same organization. 
+
+
+
+
+

@@ -11,6 +11,9 @@ namespace LoginDomain.Classes
 
 
     //We can consider as Entity as well.
+
+
+    /*
     public class Users
     {
         [Key]
@@ -21,7 +24,7 @@ namespace LoginDomain.Classes
         //public string HashedPassword { get; set; }
         public string Pwd { get; set; }
 
-        /*Unnecessory field*/
+        //Unnecessory field
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
@@ -41,6 +44,7 @@ namespace LoginDomain.Classes
         public Users User { get; set; }
     }
 
+    */
 
     /*****************************************************************************************
      * So what we have now is hwo Ef infer its model but further also how it can affect the interpretation of the model. 
