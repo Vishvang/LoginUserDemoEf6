@@ -22,5 +22,18 @@ namespace LoginDemo.Web.Controllers
             var model = db.GetAll();
             return View(model);
         }
+        
+        public ActionResult Details(Guid id)
+        {
+            var model = db.Get(id);
+            if (model == null)
+            {
+                //return RedirectToAction("Index");
+                return View("NotFound");    //Look for this view
+            }
+            return View(model);
+
+        }
+        
     }
 }

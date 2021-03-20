@@ -197,6 +197,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\AppSetting\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

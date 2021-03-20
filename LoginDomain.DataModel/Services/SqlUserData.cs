@@ -28,6 +28,11 @@ namespace LoginDomain.DataModel.Services
             return db.User.FirstOrDefault(u => u.Username == userName);
         }
 
+        public User_cl Get(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<User_cl> GetAll()
         {
             return from u in db.User orderby u.FirstName select u;
