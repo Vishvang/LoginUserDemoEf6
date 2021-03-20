@@ -10,5 +10,7 @@ We can publish as Nuget Package as well which can ne use by different team in sa
 
 
 
+Query string doesnt influence the slection of the controller or action.
+
 
 

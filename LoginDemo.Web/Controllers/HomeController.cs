@@ -37,12 +37,5 @@ namespace LoginDemo.Web.Controllers
             return View();
         }
 
-
-        public ActionResult UserList()
-        {
-            ViewBag.Message = "Your Users Details.";
-
-            return View();
-        }
     }
 }

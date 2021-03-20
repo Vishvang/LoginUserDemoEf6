@@ -8,5 +8,6 @@ namespace LoginDemo.Web.Models
     public class AppSettingViewModel
     {
         public string Message { get; set; }
+        public string Name { get; set; }
     }
 }

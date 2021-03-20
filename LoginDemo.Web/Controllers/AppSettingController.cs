@@ -11,10 +11,27 @@ namespace LoginDemo.Web.Controllers
     public class AppSettingController : Controller
     {
         // GET: AppSetting
-        public ActionResult Index()
+        public ActionResult Index(string name)
         {
+
+
             var model = new AppSettingViewModel();
+
+
+            /* Instead of httpcontext we can pass parameter into Index method
+
+            //This property available inside every controller
+            //Request infomr us anything we want to know about request
+
+                var anme = HttpContext.Request.QueryString["name"]; //One way to access information
+            
+            //When workign with MVC not recommended to use HttpContext directly. 
+            */
+
+
             model.Message = ConfigurationManager.AppSettings["message"];
+
+            model.Name = name ?? "No Name Available";
             return View(model);
         }
     }
