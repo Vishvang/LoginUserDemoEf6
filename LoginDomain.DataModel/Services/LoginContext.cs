@@ -6,7 +6,7 @@ using LoginDomain.Classes;
 
 
 
-namespace LoginDomain.DataModel
+namespace LoginDomain.DataModel.Services
 {
     /*So LoginContext will manage everything but yet DbContext  is not aware about our class like "User" class from Classes layer*/
 
@@ -36,6 +36,11 @@ namespace LoginDomain.DataModel
      *  public DbSet<Users> User{get;set;}
     */
 
+
+    /*This is the gateway via EF will access our class. 
+    We can build this class and use this same class defination to point diff database.
+    Can have diff dbcontext point to same database but have sets of different table. To follow Single Responsibility principle
+    */
     public class LoginContext : DbContext
     {
 

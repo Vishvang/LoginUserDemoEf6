@@ -8,15 +8,16 @@ using LoginDomain.Classes;
 
 namespace LoginDomain.DataModel.Services
 {
-    public class SqlUserData : IUserData
+    public class InSqlUserData : IUserData
     {
+        
         private readonly LoginContext db;
 
-        public SqlUserData(LoginContext db)
+        public InSqlUserData(LoginContext db)
         {
             this.db = db;
         }
-
+        
         public void Add(User_cl user)
         {
             db.User.Add(user);
@@ -30,7 +31,7 @@ namespace LoginDomain.DataModel.Services
 
         public User_cl Get(Guid id)
         {
-            throw new NotImplementedException();
+            return db.User.FirstOrDefault(u => u.UserID == id);
         }
 
         public IEnumerable<User_cl> GetAll()

@@ -5,7 +5,7 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<LoginDomain.DataModel.LoginContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<LoginDomain.DataModel.Services.LoginContext>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(LoginDomain.DataModel.LoginContext context)
+        protected override void Seed(LoginDomain.DataModel.Services.LoginContext context)
         {
             //  This method will be called after migrating to the latest version.
 
