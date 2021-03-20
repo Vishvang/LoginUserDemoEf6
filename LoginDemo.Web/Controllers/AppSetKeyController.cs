@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace LoginDemo.Web.Controllers
 {
-    public class AppSettingController : Controller
+    public class AppSetKeyController : Controller
     {
         // GET: AppSetting
         public ActionResult Index(string name)
