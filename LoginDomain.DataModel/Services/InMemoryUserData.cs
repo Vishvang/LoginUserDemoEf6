@@ -30,7 +30,9 @@ namespace LoginDomain.DataModel.Services
 
         public void Add(User_cl user)
         {
-            throw new NotImplementedException();
+            //Local Data - List of User - Just for testing purpose. Will be lost once application close. 
+            user_Cls.Add(user);
+            user.UserID = new Guid();
         }
 
         public User_cl Get(string userName)

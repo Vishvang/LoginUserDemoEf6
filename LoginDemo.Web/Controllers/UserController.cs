@@ -1,4 +1,5 @@
-﻿using LoginDomain.DataModel.Services;
+﻿using LoginDomain.Classes;
+using LoginDomain.DataModel.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,38 @@ namespace LoginDemo.Web.Controllers
             return View(model);
 
         }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public ActionResult Create(User_cl user_Cl)
+        {
+
+            /*We can access individual html here to check is value and error.
+            var err = ModelState["Username"].Errors;
+            var value = ModelState["Username"].Value;
+            */
+
+
+            if (string.IsNullOrEmpty(user_Cl.Username))
+            {
+                ModelState.AddModelError(nameof(user_Cl.Username), "The username is required");
+            }
+
+            if (ModelState.IsValid)
+            {
+                db.Add(user_Cl);
+                return View("Details");
+            }
+            return View();
+        }
+
         
     }
 }
