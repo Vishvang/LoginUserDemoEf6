@@ -53,20 +53,49 @@ namespace LoginDemo.Web.Controllers
             var value = ModelState["Username"].Value;
             */
 
-
+            /*
             if (string.IsNullOrEmpty(user_Cl.Username))
             {
                 ModelState.AddModelError(nameof(user_Cl.Username), "The username is required");
-            }
+            }*/
 
             if (ModelState.IsValid)
             {
                 db.Add(user_Cl);
-                return View("Details");
+
+
+                //Why we should redirect to some other get request page as after any post if user refresh , second post req will be generate.
+                //return View("Details");
+                return RedirectToAction("Details", new { id=user_Cl.UserID});
             }
+
             return View();
         }
 
-        
+        [HttpGet]
+        public ActionResult Edit(Guid id)
+        {
+            var model = db.Get(id);
+
+            if (model == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(model);
+        }
+
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public ActionResult Edit(User_cl user)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Update(user);
+
+                return RedirectToAction("Details", new { id = user.UserID });
+            }
+            return View(user);
+        }
     }
 }

@@ -42,7 +42,18 @@ namespace LoginDomain.DataModel.Services
 
         public void Update(User_cl user)
         {
-            throw new NotImplementedException();
+            var existing = Get(user.UserID);
+            if (existing != null)
+            {
+                existing.Username = user.Username;
+                existing.FirstName = user.FirstName;
+                existing.LastName = user.LastName;
+                existing.LoginName = user.LoginName;
+                existing.Pwd = user.Pwd;
+                existing.PhoneNumber = user.PhoneNumber;
+                existing.Email = user.Email;
+                existing.DateOfBirth = user.DateOfBirth;
+            }
         }
 
        
